@@ -1,0 +1,34 @@
+body{
+    background-color: #000000;
+    font-family: "TSTAR Mono Round W00 Regular", sans-serif;
+    font-size: 2.5em;
+    color: #616161;
+}
+
+#pretty-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+} 
+
+#stuff h1 {
+    color: #ffffff;
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 10px;
+    transform: skewY(5deg);
+    user-select: none;
+}
+
+#stuff{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
