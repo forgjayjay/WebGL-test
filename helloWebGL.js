@@ -325,16 +325,19 @@ if (canvas) {
         lastMouseY = e.screenY;
     }
 
-    canvas.addEventListener("mouseout", () => {
-            moving = false;
-    });
+    // canvas.addEventListener("mouseout", () => {
+    //         moving = false;
+    // });
 
-    canvas.addEventListener("mousemove", e => {
+    canvas.addEventListener("contextmenu", event => {event.preventDefault();})
+
+    document.addEventListener("mousemove", e => {
         if(!moving){
             startMove(e);
         }
         else {
-            splat(e.offsetX, e.offsetY, 5 * (e.offsetX - my_dx), 5 * (e.offsetY - my_dy), my_color), my_dx = e.offsetX, my_dy = e.offsetY;
+            splat(e.clientX, e.clientY, 5 * (e.clientX - my_dx), 5 * (e.clientY - my_dy), my_color), my_dx = e.clientX, my_dy = e.clientY;
+            console.log(e);
         }
         
     }), setInterval(function() {
